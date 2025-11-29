@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f3f3f3;
+}
+
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    width: 260px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.left-panel h2 {
+    margin: 0;
+}
+
+.left-panel input,
+.left-panel select {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.left-panel button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3454d1;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.main-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-bar select,
+.filter-bar button {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.card p {
+    margin: 6px 0;
+}
+
+.card button {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px;
+    border: 1px solid #777;
+    background-color: #e6e6e6;
+    cursor: pointer;
+    border-radius: 4px;
+}
