@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <aside class="left-panel">
+            <h2>Add Fleet</h2>
+
+            <input id="regNo" type="text" placeholder="Reg No of Vehicle">
+
+            <select id="categorySelect">
+                <option value="">Select Category</option>
+                <option value="Car">Auto</option>
+                <option value="Car">Car</option>
+                <option value="Bus">Bus</option>
+                <option value="Truck">Truck</option>
+            </select>
+
+            <input id="driverName" type="text" placeholder="Driver Name">
+
+            <select id="isAvailable">
+                <option value="Available">Available</option>
+                <option value="Unavailable">Unavailable</option>
+            </select>
+
+            <button id="addBtn">Add Fleet</button>
+        </aside>
+
+        <main class="main-area">
+            <div class="filter-bar">
+                <select id="filterCategory">
+                    <option value="">All Category</option>
+                    <option value="Car">Auto</option>
+                    <option value="Car">Car</option>
+                    <option value="Bus">Bus</option>
+                    <option value="Truck">Truck</option>
+                </select>
+
+                <select id="filterAvailability">
+                    <option value="">All Availability</option>
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                </select>
+
+                <button id="clearFilter">Clear Filter</button>
+            </div>
+
+            <div id="cardsContainer" class="cards-container"></div>
+        </main>
+
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
