@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fleet Management - Login</title>
+<link rel="stylesheet" href="assets/styles.css">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f2f2f2;
+        font-family: Arial, sans-serif;
+    }
+
+    .centered-card {
+        background: white;
+        padding: 32px;
+        width: 320px;
+        border-radius: 8px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .login-form label {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .login-form input {
+        padding: 10px;
+        margin-top: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .btn {
+        padding: 10px;
+        border: none;
+        background: #3454d1;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+</style>
+</head>
+
+<body>
+
+<main class="centered-card">
+    <h1>Fleet Management App Login</h1>
+
+    <form id="loginForm" class="login-form" onsubmit="return false;">
+        <label>
+            Email
+            <input id="email" type="email" placeholder="admin@gmail.com" required>
+        </label>
+
+        <label>
+            Password
+            <input id="password" type="password" placeholder="admin1234" required>
+        </label>
+
+        <button id="loginBtn" class="btn">Login</button>
+    </form>
+</main>
+
+<script>
+    const VALID_EMAIL = 'admin@gmail.com';
+    const VALID_PASSWORD = 'admin1234';
+
+    document.getElementById('loginBtn').addEventListener('click', () => {
+        const email = document.getElementById('email').value.trim();
+        const pass = document.getElementById('password').value;
+
+        if (email === VALID_EMAIL && pass === VALID_PASSWORD) {
+            alert('Login success');
+            window.location.href = 'admin.html';
+        } else {
+            alert('Wrong email or password');
+        }
+    });
+</script>
+
+</body>
+</html>
